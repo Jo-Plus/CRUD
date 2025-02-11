@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+      <div class="crud">
+        <div class="head">
+          <img src="img/jo.png" alt="">
+          <h1>CRUD Project</h1>
+        </div>
+        <div class="inputs">
+          <input type="text" id="address" placeholder="Title" />
+          <div class="price">
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="price"
+              placeholder="price"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="taxes"
+              placeholder="Taxes"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="ads"
+              placeholder="Ads"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="discount"
+              placeholder="Discount"
+            />
+            <small id="total">0</small>
+          </div>
+          <input type="number" id="count" placeholder="Count" />
+          <input type="text" id="category" placeholder="Category" />
+          <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+          <div class="searchBlock">
+            <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search" />
+            <div class="btnSearch">
+              <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+              <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+            </div>
+          </div>
+          <div id="deleteAll">
+          </div>
+          <table>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Count</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
