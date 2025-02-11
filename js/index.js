@@ -46,10 +46,8 @@ submit.onclick = function () {
       submit.innerHTML = 'Create';
       count.style.display = 'block';
     }
-  } else {
-    clearData();
   }
-
+    clearData();
   localStorage.setItem('product', JSON.stringify(datapro));
   showData();
 }
